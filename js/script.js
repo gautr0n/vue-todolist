@@ -27,7 +27,10 @@ createApp({
         },
         addToDo() {
             const newToDo = this.newToDo;
-            this.toDoList.push(newToDo);
+            this.toDoList.push({
+                text: newToDo,
+                done: false,
+            });
             this.newToDo = '';
         }
     }
