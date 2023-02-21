@@ -14,7 +14,10 @@
 <body>
   <div id="app" class="container">
     <ul>
-      <li v-for="toDo in toDoList" :class="{done : toDo.done === true}">{{toDo.text}}</li>
+      <li v-for="(toDo, index) in toDoList">
+        <span :class="{done : toDo.done === true}">{{toDo.text}}</span>
+        <span @click="removeToDo(index)">&#9932</span>
+      </li>
     </ul>
   </div>
     <!--java script-->
