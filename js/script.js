@@ -1,5 +1,26 @@
-import { createApp } from 'vue'
-// import the root component App from a single-file component.
-import App from './App.vue'
+const { createApp } = Vue
 
-const app = createApp(App)
+createApp({
+    data() {
+        return{
+            toDoList: [
+                {
+                    text:'Fare la spesa',
+                    done: true,
+                },{
+                    text:'Fare la spesa',
+                    done: true,
+                },{
+                    text:'Fare la spesa',
+                    done: false,
+                },{
+                    text:'Fare la spesa',
+                    done: false,
+                },
+            ],
+        }
+    },
+    methods: {
+
+    }
+}).mount('#app')

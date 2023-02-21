@@ -14,3 +14,7 @@
 .margin-bt{
     margin-bottom: 20px;
 }
+
+.done{
+    text-decoration: line-through;
+}

@@ -12,22 +12,11 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        export default {
-          data() {
-              return {
-                parentMessage: 'Parent',
-                items: [{ message: 'Foo' }, { message: 'Bar' }]
-              }
-            }
-        }
-        </script>
-        
-        <template>
-            <li v-for="(item, index) in items">
-              {{ parentMessage }} - {{ index }} - {{ item.message }}
-            </li>
-        </template>
+  <div id="app" class="container">
+    <ul>
+      <li v-for="toDo in toDoList" :class="{done : toDo.done === true}">{{toDo.text}}</li>
+    </ul>
+  </div>
     <!--java script-->
     <script src="js/script.js"></script>
 </body>
