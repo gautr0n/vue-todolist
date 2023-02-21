@@ -5,24 +5,30 @@ createApp({
         return{
             toDoList: [
                 {
-                    text:'Fare la spesa',
-                    done: true,
-                },{
-                    text:'Fare la spesa',
-                    done: true,
+                    text:'Lavare il cane',
+                    done: false,
                 },{
                     text:'Fare la spesa',
                     done: false,
                 },{
-                    text:'Fare la spesa',
+                    text:'Buttare lo sporco',
+                    done: true,
+                },{
+                    text:'Pulire i vetri',
                     done: false,
                 },
             ],
+            newToDo: '',
         }
     },
     methods: {
         removeToDo(index) {
-            this.toDoList.splice(index, 1)
+            this.toDoList.splice(index, 1);
+        },
+        addToDo() {
+            const newToDo = this.newToDo;
+            this.toDoList.push(newToDo);
+            this.newToDo = '';
         }
     }
 }).mount('#app')
